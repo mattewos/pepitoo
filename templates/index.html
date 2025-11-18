@@ -1,0 +1,919 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Pepito - Mobile Vet Services</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="{% static 'css/plugins.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/new.css'%}">
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="centered">
+            <div class="cont">
+                <div class="loader-circle"></div>
+                <div class="loader-line-mask">
+                    <div class="loader-line"></div>
+                </div> <img src="{% static 'img/preloader.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <div class="logo-wrapper">
+                    <a class="logo" href="{% url 'home' %}">
+                        <img src="{% static 'img/logoo.png' %}" class="logo-img" alt="">
+                    </a>
+                </div>
+                <!-- Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-light fa-bars"></i></span>
+                </button>
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Service</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'adoption' %}">Adoption</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                    <div class="navbar-right">
+                        <div class="button"><a href="{% url 'contact'%}"><i class="flaticon-pawprint-4 mr-5"></i> Send a message</a></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Parallax Image Header -->
+        <section class="parallax-header section-padding valign bg-img bg-position-top" data-overlay-dark="3" data-background="{% static 'img/slider/cow.jpg' %}">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <h6><div class="icon"><i class="flaticon-prize-badge-with-paw-print"></i></div> Our passion is animals</h6>
+                        <h1>Taking care of your pets.</h1>
+                        <p>Trustworthy vets putting your pets first.</p> 
+                        <a href="#" class="button-1"><i class="flaticon-pawprint-4"></i> Discover</a>
+                    </div>
+                </div>
+            </div>
+            <!-- WhatsApp -->
+            <div class="whatsapp">
+                <a href="#" target="_blank">
+                    <div class="icon d-flex justify-content-center align-items-center"> <i class="fa-brands fa-whatsapp"></i> </div>
+                    <div class="call"><span> +251 987 654 321</span>
+                        <br>Dial Line
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    <!-- About -->
+    <section class="about section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 mb-30">
+                    <div class="content">
+                        <div class="section-subtitle">
+                            <div class="icon"><i class="flaticon-pawprint-4"></i></div> Our passion is animals
+                        </div>
+                        <div class="section-title">We offer services for special pets!</div>
+                        <p>We provide expert care and support for farm and rural animals, helping farmers keep their livestock healthy and productive.</p>
+                        <ul class="listext list-unstyled">
+                            <li>
+                                <div class="listext-icon"> <i class="flaticon-pawprint-4"></i> </div>
+                                <div class="listext-text">
+                                    <p>Reliable animal health services</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="listext-icon"> <i class="flaticon-pawprint-4"></i> </div>
+                                <div class="listext-text">
+                                    <p>A passionate team ready to support farmers</p>
+                                </div>
+                            </li>
+                        </ul> <a href="{% url 'about' %}" class="button-1 mt-10"><i class="flaticon-pawprint-4"></i> Read more</a>
+                        <div class="phone"><a href="tel:+1234567890"><i class="fa-light fa-phone"></i>+251 987 654 321</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-lg-1 col-md-12 mt-30">
+                    <div class="item">
+                        <div class="note vert-move">
+                            <div class="icons mb-20"> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> </div>
+                            <div class="txt">“Take care of animals as if they were your children!”</div>
+                            <div class="title"><i class="flaticon-pawprint-4"></i> Olivia Martin</div>
+                            <div class="number-bg"></div>
+                        </div> <img src="{% static 'img/sheep2.jpg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services 1 -->
+    <section class="services1 section-padding bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-30">
+                    <div class="section-subtitle">
+                        <div class="icon"><i class="flaticon-pawprint-4"></i></div> We love animals
+                    </div>
+                    <div class="section-title">Our pet care services</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-dog-and-pets-house">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Livestock Support</h2>
+                                    <p class="text">Helping farmers keep animals healthy and productive.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/01.jpg' %}">
+                                <div class="contents">
+                                    <h2 class="title">Livestock Support</h2>
+                                    <p class="text">Helping farmers keep animals healthy and productive.</p>
+                                    <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-animals-11">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color-2" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Dog walking</h2>
+                                    <p class="text">Providing reliable care to keep your animals healthy and productive.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/02.jpg' %}">
+                                <div class="contents">
+                                    <h2 class="title">Dog walking</h2>
+                                    <p class="text">Providing reliable care to keep your animals healthy and productive.</p> <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-veterinarian-hospital">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color-3" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Pet dentistry</h2>
+                                    <p class="text">Basic animal dental care to keep your livestock healthy and prevent diseases.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/03.jpg' %}" alt>
+                                <div class="contents">
+                                    <h2 class="title">Pet dentistry</h2>
+                                    <p class="text">Basic animal dental care to keep your livestock healthy and prevent diseases.</p> <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-syringe">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color-4" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Vaccinations</h2>
+                                    <p class="text">Providing essential vaccinations to protect your animals from common diseases.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/04.jpg' %}">
+                                <div class="contents">
+                                    <h2 class="title">Vaccinations</h2>
+                                    <p class="text">Providing essential vaccinations to protect your animals from common diseases.</p> <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-scissors">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color-2" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Pet grooming</h2>
+                                    <p class="text">Basic grooming and hygiene care to keep your animals clean and healthy.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/05.jpg' %}">
+                                <div class="contents">
+                                    <h2 class="title">Pet grooming</h2>
+                                    <p class="text">Basic grooming and hygiene care to keep your animals clean and healthy.</p> <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-dog-puppy">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Puppy program</h2>
+                                    <p class="text">Guidance and care for young animals to ensure healthy growth and development.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/06.jpg' %}">
+                                <div class="contents">
+                                    <h2 class="title">Puppy program</h2>
+                                    <p class="text">Guidance and care for young animals to ensure healthy growth and development.</p> <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-cross">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color-4" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Veterinary service</h2>
+                                    <p class="text">Professional veterinary care to diagnose, treat, and prevent animal health issues.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/07.jpg' %}">
+                                <div class="contents">
+                                    <h2 class="title">Veterinary service</h2>
+                                    <p class="text">Professional veterinary care to diagnose, treat, and prevent animal health issues.</p> <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-animal-13">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color-3" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Overnight care</h2>
+                                    <p class="text">Safe and attentive care for your animals overnight when you are away.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/08.jpg' %}">
+                                <div class="contents">
+                                    <h2 class="title">Overnight care</h2>
+                                    <p class="text">Safe and attentive care for your animals overnight when you are away.</p> <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-pet-food">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Healthy meals</h2>
+                                    <p class="text">Providing nutritious meals to keep your animals strong and healthy.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/09.jpg' %}">
+                                <div class="contents">
+                                    <h2 class="title">Healthy meals</h2>
+                                    <p class="text">Providing nutritious meals to keep your animals strong and healthy.</p> <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-people-1">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color-2" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Fun activities</h2>
+                                    <p class="text">Engaging activities to keep your animals active and happy.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/10.jpg' %}">
+                                <div class="contents">
+                                    <h2 class="title">Fun activities</h2>
+                                    <p class="text">Engaging activities to keep your animals active and happy.</p> <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="front">
+                                <div class="contents"> <span class="flaticon-dog-training-3">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="72" viewBox="0 0 80 72">
+                                                <path class="svg-image fill-color-3" d="M30,16C46.588,6.484,54.481-2.058,64.3,1.452c3.145,1.125,6.861,3.657,10.212,9.426A40.611,40.611,0,0,1,59.5,66.544,41.151,41.151,0,0,1,3.482,51.629C0.134,45.865-.2,41.289.375,38.125,2.228,27.979,13.544,25.436,30,16Z"></path>
+                                            </svg>
+                                        </span> </span>
+                                    <h2 class="title">Training services</h2>
+                                    <p class="text">Practical guidance to train animals for better health and farm productivity.</p>
+                                </div>
+                            </div>
+                            <div class="back"> <img class="img img-fluid" src="{% static 'img/services/11.jpg' %}">
+                                <div class="contents">
+                                    <h2 class="title">Training services</h2>
+                                    <p class="text">Practical guidance to train animals for better health and farm productivity.</p> <a href="#" class="button-1 mt-20">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner -->
+    <section class="banner section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="content">
+                        <div class="section-subtitle">
+                            <div class="icon"><i class="flaticon-pawprint-4"></i></div> We love animals
+                        </div>
+                        <div class="section-title">Why rely on us?</div>
+                        <p>We combine expert knowledge, hands-on care, and accessible support to ensure your animals stay healthy and productive, helping farmers thrive in rural communities.</p>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <ul class="listext list-unstyled">
+                                    <li>
+                                        <div class="listext-icon"><i class="flaticon-pawprint-4"></i></div>
+                                        <div class="listext-text">
+                                            <p>Healthy Livestock</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listext-icon"><i class="flaticon-pawprint-4"></i></div>
+                                        <div class="listext-text">
+                                            <p>Convenience</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listext-icon"><i class="flaticon-pawprint-4"></i></div>
+                                        <div class="listext-text">
+                                            <p>Transperency</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listext-icon"><i class="flaticon-pawprint-4"></i></div>
+                                        <div class="listext-text">
+                                            <p>Certified Groomer</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <ul class="listext list-unstyled">
+                                    <li>
+                                        <div class="listext-icon"><i class="flaticon-pawprint-4"></i></div>
+                                        <div class="listext-text">
+                                            <p>Personalized care</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listext-icon"><i class="flaticon-pawprint-4"></i></div>
+                                        <div class="listext-text">
+                                            <p>Peace of mind</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listext-icon"><i class="flaticon-pawprint-4"></i></div>
+                                        <div class="listext-text">
+                                            <p>Teamwork</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listext-icon"><i class="flaticon-pawprint-4"></i></div>
+                                        <div class="listext-text">
+                                            <p>Expert Care</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-2 col-md-12">
+                    <div class="img"><img src="{% static 'img/pet3.png' %}" class="img-fluid" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Adoption -->
+    <section class="adoption section-padding bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-30">
+                    <div class="section-subtitle">
+                        <div class="icon"><i class="flaticon-pawprint-4"></i></div> Adopt a pet
+                    </div>
+                    <div class="section-title">Find a new furry friend</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-30">
+                    <div class="item">
+                        <div class="img"><img src="{% static 'img/friend/01.jpg' %}" alt="" class="w-100"></div>
+                        <div class="front-header">
+                            <h3 class="front-title">Missy</h3>
+                        </div>
+                        <div class="back-wrap bg-white">
+                            <a href="#">
+                                <h4 class="back-title">Missy</h4>
+                                <div class="ullist">
+                                    <ul>
+                                        <li>Gender: Female</li>
+                                        <li>Neutered: Yes</li>
+                                        <li>Age: 2 years</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-30">
+                    <div class="item">
+                        <div class="img"><img src="{% static 'img/friend/02.jpg' %}" alt="" class="w-100"></div>
+                        <div class="front-header">
+                            <h3 class="front-title">Bella</h3>
+                        </div>
+                        <div class="back-wrap bg-white">
+                            <h4 class="back-title"><a href="#">Bella</a></h4>
+                            <div class="ullist">
+                                <ul>
+                                    <li>Gender: Male</li>
+                                    <li>Neutered: Yes</li>
+                                    <li>Age: 3 years</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-30">
+                    <div class="item">
+                        <div class="img"><img src="{% static 'img/friend/03.jpg' %}" alt="" class="w-100"></div>
+                        <div class="front-header">
+                            <h3 class="front-title">Kitty</h3>
+                        </div>
+                        <div class="back-wrap bg-white">
+                            <h4 class="back-title"><a href="#">Kitty</a></h4>
+                            <div class="ullist">
+                                <ul>
+                                    <li>Gender: Male</li>
+                                    <li>Neutered: Yes</li>
+                                    <li>Age: 5 years</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-30">
+                    <div class="item">
+                        <div class="img"><img src="{% static 'img/friend/04.jpg' %}" alt="" class="w-100"></div>
+                        <div class="front-header">
+                            <h3 class="front-title">Penny</h3>
+                        </div>
+                        <div class="back-wrap bg-white">
+                            <h4 class="back-title"><a href="#">Penny</a></h4>
+                            <div class="ullist">
+                                <ul>
+                                    <li>Gender: Male</li>
+                                    <li>Neutered: No</li>
+                                    <li>Age: 5 years</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center mt-30">
+                    <div class="section-info">
+                        <div class="tag">Adopt a pet</div>
+                        <div class="desc">Call us <span class="text-decoration-line-bottom">+251 987 654 321</span> for detailed information!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team -->
+    <section class="team section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-30">
+                    <div class="section-subtitle">
+                        <div class="icon"><i class="flaticon-pawprint-4"></i></div> Qualified Experts
+                    </div>
+                    <div class="section-title">Meet our team</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="img"> <img src="{% static 'img/team/01.jpg' %}" alt="" class="img-cover">
+                                <div class="social-icons">
+                                    <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                                    <a href="#"> <i class="fab fa-x-twitter"></i> </a>
+                                    <a href="#"> <i class="fab fa-instagram"></i> </a>
+                                    <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h5><a href="#">Lily Brown</a></h5>
+                                <p>Veterinarian</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img"> <img src="{% static 'img/team/02.jpg' %}" alt="" class="img-cover">
+                                <div class="social-icons">
+                                    <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                                    <a href="#"> <i class="fab fa-x-twitter"></i> </a>
+                                    <a href="#"> <i class="fab fa-instagram"></i> </a>
+                                    <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h5><a href="#">Eleanor Arya</a></h5>
+                                <p>Training Manager</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img"> <img src="{% static 'img/team/03.jpg' %}" alt="" class="img-cover">
+                                <div class="social-icons">
+                                    <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                                    <a href="#"> <i class="fab fa-x-twitter"></i> </a>
+                                    <a href="#"> <i class="fab fa-instagram"></i> </a>
+                                    <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h5><a href="#">Sophia Mia</a></h5>
+                                <p>Dog Walker</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img"> <img src="{% static 'img/team/04.jpg' %}" alt="" class="img-cover">
+                                <div class="social-icons">
+                                    <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                                    <a href="#"> <i class="fab fa-x-twitter"></i> </a>
+                                    <a href="#"> <i class="fab fa-instagram"></i> </a>
+                                    <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h5><a href="#">Emily Lucas</a></h5>
+                                <p>Pet Care Specialist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial -->
+    <section class="testimonial section-padding bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-30">
+                    <div class="section-subtitle">
+                        <div class="icon"><i class="flaticon-pawprint-4"></i></div> Happy pet lovers
+                    </div>
+                    <div class="section-title">Pepito reviews</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-30">
+                    <div class="item">
+                        <div class="img">
+                            <div class="br-sh"> <img src="{% static 'img/comments/01.jpg' %}" class="img-fluid" alt=""> </div>
+                        </div>
+                        <div class="cont">
+                            <h3>@emily</h3>
+                            <div class="icons mb-15"> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> </div>
+                            <p>Reliable, friendly, and can tell they love animals!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-30">
+                    <div class="item">
+                        <div class="img">
+                            <div class="br-sh"> <img src="{% static 'img/comments/02.jpg' %}" class="img-fluid" alt=""> </div>
+                        </div>
+                        <div class="cont">
+                            <h3>@sophia</h3>
+                            <div class="icons mb-15"> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> </div>
+                            <p>My dog love walker and they are always so flexible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-30">
+                    <div class="item">
+                        <div class="img">
+                            <div class="br-sh"> <img src="{% static 'img/comments/03.jpg' %}" class="img-fluid" alt=""> </div>
+                        </div>
+                        <div class="cont">
+                            <h3>@jason</h3>
+                            <div class="icons mb-15"> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> </div>
+                            <p>Dependable, honest, and my rabbits love them!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-30">
+                    <div class="item">
+                        <div class="img">
+                            <div class="br-sh"> <img src="{% static 'img/comments/04.jpg' %}" class="img-fluid" alt=""> </div>
+                        </div>
+                        <div class="cont">
+                            <h3>@evelyn</h3>
+                            <div class="icons mb-15"> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> </div>
+                            <p>Always a joy to see my babies being well taken of.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center mt-20">
+                    <div class="section-info">
+                        <div class="tag">Pet lovers</div>
+                        <div class="desc">Genuine 1000+ people trusting <span class="text-decoration-line-bottom">Pepito</span> pet care.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video -->
+    <section class="section-padding video-wrapper video bg-img bg-fixed" data-overlay-dark="3" data-background="img/slider/3.jpg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-12 mb-20">
+                    <div class="section-head text-center">
+                        <div class="section-subtitle text-white">
+                            <div class="icon"><i class="flaticon-pawprint-4"></i></div> Promo video
+                        </div>
+                        <div class="section-title white">Watch pepito video</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a class="vid" href="https://youtu.be/545E1RCSzLw">
+                        <div class="vid-butn"> <span class="icon"><i class="fa-solid fa-play"></i></span> </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop -->
+
+    <!-- Pricing 1 -->
+    <section class="pricing1 section-padding bg-light-gray">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-12 mb-30">
+                    <div class="section-subtitle">
+                        <div class="icon"><i class="flaticon-pawprint-4"></i></div> Our packages
+                    </div>
+                    <div class="section-title">Plans & Pricing</div>
+                    <p>Affordable solutions tailored for farmers and their animals.</p> <a href="{% url 'about' %}" class="button-1 mt-10"><i class="flaticon-pawprint-4"></i> All prices</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="item">
+                        <h5>Standard</h5>
+                        <ul class="mb-30">
+                            <li class="text-white">Pet shower</li>
+                            <li class="text-white">Pet grooming</li>
+                            <li class="text-white">Hair and nail cut</li>
+                            <li class="text-white">Spa and grooming</li>
+                            <li class="text-white">Brush and blow dry</li>
+                        </ul>
+                        <div class="cont">
+                            <h3 class="text-white"><span>$</span>79<i class="text-white">/hr</i></h3> <a href="#" class="button-3"><i class="flaticon-pawprint-4"></i> Book now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="item bg-white">
+                        <h5 class="text-dark">Premium</h5>
+                        <ul class="mb-30">
+                            <li>Pet shower</li>
+                            <li>Pet grooming</li>
+                            <li>Hair and nail cut</li>
+                            <li>Spa and grooming</li>
+                            <li>Brush and blow dry</li>
+                        </ul>
+                        <div class="cont">
+                            <h3 class="text-dark"><span class="text-dark">$</span>99<i>/hr</i></h3> <a href="#" class="button-1"><i class="flaticon-pawprint-4"></i> Book now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQs -->
+    <section class="faqs section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-30">
+                    <div class="section-subtitle">
+                        <div class="icon"><i class="flaticon-pawprint-4"></i></div> General & Popular
+                    </div>
+                    <div class="section-title">Frequently asked questions</div>
+                    <p>Answers to common questions about our animal health services.</p> <a href="#" class="button-1"><i class="flaticon-pawprint-4"></i> Other FAQs</a>
+                </div>
+                <div class="col-lg-7 offset-lg-1 col-md-12">
+                    <ul class="accordion-box clearfix">
+                        <li class="accordion block">
+                            <div class="acc-btn"><span>01</span> What types of business entities are there?</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <p>Business entities are different ways to organize a business, including sole proprietorships, partnerships, limited liability companies (LLCs), corporations, and cooperatives, each offering different benefits and legal protections.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion block">
+                            <div class="acc-btn"><span>02</span> Do I need legal advice just to form my business?</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <p>While it’s not always required, seeking legal advice can help ensure your business is set up correctly and complies with local laws.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion block">
+                            <div class="acc-btn"><span>03</span> What should my attorney expect from me?</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <p>You should provide your attorney with clear information about your business goals, structure, finances, and any agreements or documents related to your business.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion block">
+                            <div class="acc-btn"><span>04</span> What is the role of witness in court?</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <p>A witness provides testimony or evidence in court to help establish the facts of a case.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients section-padding">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-12 text-center mb-60">
+                    <div class="section-info">
+                        <div class="tag">Awards</div>
+                        <div class="desc">Our pet and animal care <span class="text-decoration-line-bottom">awards</span>.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme clients-active feather-shadow">
+                        <a href="#0"><img src="{% static 'img/clients/01.png' %}" alt=""></a>
+                        <a href="#0"><img src="{% static 'img/clients/02.png' %}" alt=""></a>
+                        <a href="#0"><img src="{% static 'img/clients/03.png' %}" alt=""></a>
+                        <a href="#0"><img src="{% static 'img/clients/04.png' %}" alt=""></a>
+                        <a href="#0"><img src="{% static 'img/clients/05.png' %}" alt=""></a>
+                        <a href="#0"><img src="{% static 'img/clients/06.png' %}" alt=""></a>
+                        <a href="#0"><img src="{% static 'img/clients/07.png' %}" alt=""></a>
+                        <a href="#0"><img src="{% static 'img/clients/08.png' %}" alt=""></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- top -->
+        <div class="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-30">
+                        <div class="item">
+                            <div class="logo"><img src="{% static 'img/logo-light.png' %}" alt=""></div>
+                            <p class="mb-20">Pepito Mobile Vet Services provides reliable animal health support for farmers and their livestock.</p>
+                            <div class="social-icons">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1 mb-30">
+                        <div class="item">
+                            <h3>Contact</h3>
+                            <div class="location">0665 Bole st.
+                                <br>10234 Addis Ababa, Ethiopia
+                            </div>
+                            <div class="phone"><a href="tel:+1234567890">+251 987 654 321</a></div>
+                            <div class="mail"><a href="mailto:hello@Pepito.com">hello@Pepito.com</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="item">
+                            <h3>Subscribe</h3>
+                            <p class="mb-20">Want to be notified about our services. Just sign up and we'll send you a notification by email.</p>
+                            <div class="newsletter">
+                                <form action="#">
+                                    <input type="email" placeholder="Email Address" required="">
+                                    <button type="submit"><i class="fa-light fa-arrow-right"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- divider -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="divido"></div>
+                </div>
+            </div>
+        </div>
+        <!-- bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="links">
+                            <ul>
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'services' %}">Services</a></li>
+                                <li><a href="{% url 'adoption' %}">Adoption</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 text-end">
+                        <p>&copy; Copyright by <a href="#">Pepito Mobile Vet Services</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.isotope.v3.0.2.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/scrollIt.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/YouTubePopUp.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>
